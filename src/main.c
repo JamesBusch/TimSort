@@ -10,6 +10,9 @@
  * 
  * ***********************/
 
+//TODO move testers for each sorting algorthim into there own files
+//TODO add run command for each tester to makefile
+//TODO clean up testing code to make more readable      
 
 #include "insertionSort.h"
 #include "mergeSort.h"
