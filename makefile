@@ -8,7 +8,7 @@ BINDIR = ./bin/
 
 SOURCES = $(SRCDIR) *.c
 
-all:$(BINDIR)timSort
+all:createBin $(BINDIR)timSort
 
 $(BINDIR)timSort: $(objects)
 	$(CC) $(objects) -o $@
@@ -24,6 +24,10 @@ $(BINDIR)timSort.o: $(SRCDIR)timSort.c
 
 $(BINDIR)mergeSort.o: $(SRCDIR)mergeSort.c
 	$(CC) $(CFLAGS) -c $(SRCDIR)mergeSort.c -o $@
+
+createBin:
+	[ -d $(BINDIR) ] || mkdir -p $(BINDIR)
+
 run:
 	$(BINDIR)timSort
 
