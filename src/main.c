@@ -1,8 +1,8 @@
 /**************************
  * James Busch
- * 01/05/20
+ * 01/07/20
  * 
- * Version: 0.01
+ * Version: 0.02
  * 
  * This main is used for testing the differnt sorting algorthms
  * both by printing the before and after of the array and using 
@@ -12,6 +12,7 @@
 
 
 #include "insertionSort.h"
+#include "mergeSort.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
