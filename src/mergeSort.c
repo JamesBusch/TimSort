@@ -2,7 +2,7 @@
  * James Busch
  * 01/07/20
  * 
- * Version: 0.02
+ * Version: 0.03
  * 
  * Merge sort is used in Tim sort so i decided to do it now 
  * so im able to fully test it before making timsort
@@ -19,6 +19,8 @@
  * in: int **arr, int leftIndex, int rightIndex
  * out: void
  **********************/
+#include "mergeSort.h"
+
 void mergeSort(int **arr, int leftIndex, int rightIndex){
     int middleIndex;
     if(leftIndex < rightIndex){
