@@ -2,7 +2,7 @@
  * James Busch
  * 01/07/20
  * 
- * Version: 0.03
+ * Version: 0.04
  * 
  * This main is used for testing the differnt sorting algorthms
  * both by printing the before and after of the array and using 
@@ -17,10 +17,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include <time.h>
 
 int main(){
-    srand(time(0));
+
     int *arr;
     int *bigArr;
     int *smallArr;
