@@ -1,23 +1,31 @@
 cc = gcc
-CFLAGS = -std=c99 -Wall -g -pedantic
-objects = main.o insertionSort.o timSort.o
+CFLAGS = -std=c99 -Wall -g -pedantic -I$(IDIR)
+objects = $(BINDIR)main.o $(BINDIR)insertionSort.o $(BINDIR)timSort.o $(BINDIR)mergeSort.o
 
-all:timSort
+IDIR = ./includes/
+SRCDIR = ./src/
+BINDIR = ./bin/
 
-timSort: $(objects)
+SOURCES = $(SRCDIR) *.c
+
+all:$(BINDIR)timSort
+
+$(BINDIR)timSort: $(objects)
 	$(CC) $(objects) -o $@
 
-main.o: main.c *.h
-	$(CC) $(CFLAGS) -c main.c -o $@
+$(BINDIR)main.o: $(SRCDIR)main.c $(IDIR)*.h
+	$(CC) $(CFLAGS) -c $(SRCDIR)main.c -o $@
 
-insertionSort.o: insertionSort.c
-	$(CC) $(CFLAGS) -c insertionSort.c -o $@
+$(BINDIR)insertionSort.o: $(SRCDIR)insertionSort.c
+	$(CC) $(CFLAGS) -c $(SRCDIR)insertionSort.c -o $@
 
-timSort.o: timSort.c
-	$(CC) $(CFLGAS) -c timSort.c -o $@
+$(BINDIR)timSort.o: $(SRCDIR)timSort.c
+	$(CC) $(CFLGAS) -c $(SRCDIR)timSort.c -o $@
 
+$(BINDIR)mergeSort.o: $(SRCDIR)mergeSort.c
+	$(CC) $(CFLAGS) -c $(SRCDIR)mergeSort.c -o $@
 run:
-	./timSort
+	$(BINDIR)timSort
 
 clean:
-	rm ./*.o timSort
+	rm $(BINDIR)*.o $(BINDIR)timSort
