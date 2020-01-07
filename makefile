@@ -1,6 +1,6 @@
 cc = gcc
 CFLAGS = -std=c99 -Wall -g -pedantic -I$(IDIR)
-objects = $(BINDIR)main.o $(BINDIR)insertionSort.o $(BINDIR)timSort.o $(BINDIR)mergeSort.o
+objects = $(BINDIR)main.o $(BINDIR)insertionSort.o $(BINDIR)timSort.o $(BINDIR)mergeSort.o $(BINDIR)utils.o
 
 IDIR = ./includes/
 SRCDIR = ./src/
@@ -24,6 +24,9 @@ $(BINDIR)timSort.o: $(SRCDIR)timSort.c
 
 $(BINDIR)mergeSort.o: $(SRCDIR)mergeSort.c
 	$(CC) $(CFLAGS) -c $(SRCDIR)mergeSort.c -o $@
+
+$(BINDIR)utils.o: $(SRCDIR)utils.c
+	$(CC) $(CLFAGS) -c $(SRCDIR)utils.c -o $@
 
 createBin:
 	[ -d $(BINDIR) ] || mkdir -p $(BINDIR)
