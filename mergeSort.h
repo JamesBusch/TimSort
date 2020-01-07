@@ -1,8 +1,8 @@
 /**************************
  * James Busch
- * 01/06/20
+ * 01/07/20
  * 
- * Version: 0.01
+ * Version: 0.02
  * 
  * This is the header file for mergeSort
  * 
@@ -11,5 +11,5 @@
 #define MERGE_SORT_H_
 
 void mergeSort(int **arr, int size);
-
+void merge(int **arr, int startIndex, int middleIndex, int endIndex);
 #endif
