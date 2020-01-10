@@ -9,6 +9,7 @@
  * 
  * ***********************/
 
+#include "mergeSort.h"
 
 /************************
  * mergeSort
@@ -19,10 +20,9 @@
  * in: int **arr, int leftIndex, int rightIndex
  * out: void
  **********************/
-#include "mergeSort.h"
 
 void mergeSort(int **arr, int leftIndex, int rightIndex){
-    int middleIndex;
+    int middleIndex = 0;
     if(leftIndex < rightIndex){
         middleIndex = (leftIndex + rightIndex) / 2;
         mergeSort(arr, leftIndex, middleIndex);

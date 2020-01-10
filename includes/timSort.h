@@ -12,4 +12,9 @@
  * 
  * ***********************/
 
+#ifndef TIM_SORT_H_
+#define TIM_SORT_H_
+
 void TimSort(int **arr, int length);
+
+#endif
