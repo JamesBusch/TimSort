@@ -22,6 +22,7 @@ void insertionSortTest(){
     //For both merge sort and insertion sort I will not be testing for invalid arrays
     //due to both of these being internal implementions never to be seen by the user it
     //will be up to tim sort to make sure it is passing the functions valid arrays
+    printf("*************************INSERTION SORT TEST***************\n");
     printf("NOTE: only arrays with size <= 10 will have before and after print outs\n");
 
     printf("========================TEST ONE========================\n");
