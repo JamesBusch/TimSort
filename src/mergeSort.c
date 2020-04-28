@@ -1,8 +1,8 @@
 /**************************
  * James Busch
- * 07/01/20
+ * 28/04/20
  * 
- * Version: 0.03
+ * Version: 0.05
  * 
  * Merge sort is used in Tim sort so i decided to do it now 
  * so im able to fully test it before making timsort
@@ -10,6 +10,8 @@
  * ***********************/
 
 #include "mergeSort.h"
+#include "stdio.h"
+#include "arrUtils.h"
 
 /************************
  * mergeSort
@@ -27,8 +29,9 @@ void mergeSort(int **arr, int leftIndex, int rightIndex){
         middleIndex = (leftIndex + rightIndex) / 2;
         mergeSort(arr, leftIndex, middleIndex);
         mergeSort(arr, middleIndex + 1, rightIndex);
+
+        merge(arr, leftIndex, middleIndex, rightIndex);
     }
-    merge(arr, leftIndex, middleIndex, rightIndex);
 }
 
 /***********************
