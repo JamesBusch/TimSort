@@ -15,10 +15,12 @@
 //TODO clean up testing code to make more readable      
 
 #include "insertionSortTest.h"
+#include "mergeSortTest.h"
 
 int main(){
 
     insertionSortTest();
+    mergeSortTest();
     
     return 0;
 }
