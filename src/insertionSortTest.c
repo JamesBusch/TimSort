@@ -8,6 +8,7 @@
  **************************/
 
 #include "insertionSort.h"
+#include "insertionSortTest.h"
 #include "arrUtils.h"
 #include <stdio.h>
 #include <stdlib.h>
